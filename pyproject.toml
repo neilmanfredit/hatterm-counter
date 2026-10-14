@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "hatterm-counter"
+version = "0.1.0"
+description = "Generative AI usage counter library for hatterm and standalone use"
+authors = [{name = "Neil Manfred", email = "neil.manfred@fredianshield.com"}]
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hatterm-counter = "hatterm_counter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hatterm_counter*"]
